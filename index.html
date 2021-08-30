@@ -5,15 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <section class="titolo bg-warning">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="pt-5 fs-1 fw-bold">Create Your Burgher</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="mb-5">
+        <section id="main">
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-secondary fs-2 mb-4">Name Your Burgher</p>
+                        <p class="fs-1 fw-bold mb-5">Ingredienti</p>
+                    </div>
+                    <div class="col-6">
+                        <div class="ingredienti d-flex align-items-center mb-5">
+                            <img class="rounded-circle" src="https://via.placeholder.com/140x140" alt="">
+                            <p class="mb-0 ms-5 fs-3">Cheese</p>
+                            <input class="form-check-input ms-3 bg-danger check box" type="checkbox" value="1.5" id="flexCheckDefault">
+                            <p class="ms-3 mb-0 fs-3">add</p>
+                        </div>
     
-    <input type="checkbox" value="7" class="box">
+                        <div class="ingredienti d-flex align-items-center mb-5">
+                            <img class="rounded-circle" src="https://via.placeholder.com/140x140" alt="">
+                            <p class="mb-0 ms-5 fs-3">Egg</p>
+                            <input class="form-check-input ms-3 bg-danger check box" type="checkbox" value="1" id="flexCheckDefault">
+                            <p class="ms-3 mb-0 fs-3">add</p>
+                        </div>
+    
+                        <div class="ingredienti d-flex align-items-center mb-5">
+                            <img class="rounded-circle" src="https://via.placeholder.com/140x140" alt="">
+                            <p class="mb-0 ms-5 fs-3">Mustard</p>
+                            <input class="form-check-input ms-3 bg-danger check box" type="checkbox" value="0.2" id="flexCheckDefault">
+                            <p class="ms-3 mb-0 fs-3">add</p>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                        <div class="ingredienti d-flex align-items-center mb-5">
+                            <img class="rounded-circle" src="https://via.placeholder.com/140x140" alt="">
+                            <p class="mb-0 ms-5 fs-3">Tomato</p>
+                            <input class="form-check-input ms-3 bg-danger check box" type="checkbox" value="1" id="flexCheckDefault">
+                            <p class="ms-3 mb-0 fs-3">add</p>
+                        </div>
+    
+                        <div class="ingredienti d-flex align-items-center mb-5">
+                            <img class="rounded-circle" src="https://via.placeholder.com/140x140" alt="">
+                            <p class="mb-0 ms-5 fs-3">Lettuce</p>
+                            <input class="form-check-input ms-3 bg-danger check box" type="checkbox" value="1" id="flexCheckDefault">
+                            <p class="ms-3 mb-0 fs-3">add</p>
+                        </div>
+    
+                        <div class="ingredienti d-flex align-items-center mb-5">
+                            <img class="rounded-circle" src="https://via.placeholder.com/140x140" alt="">
+                            <p class="mb-0 ms-5 fs-3">Ketchup</p>
+                            <input class="form-check-input ms-3 bg-danger check box" type="checkbox" value="0.2" id="flexCheckDefault">
+                            <p class="ms-3 mb-0 fs-3">add</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="coupon">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <p class=" mb-0 fs-4">Discount Coupon</p>
+                    </div>
+                    <div class="col-9 mb-4">
+                        <input type="text" name="" id="" class="w-100 rounded-3 border-0 txt-box">
+                    </div>
+                    <div class="col-12">
+                        <button type="button" class="btn btn-warning m-auto d-block btn-box fs-3">Calculate</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="foot" class="bg-danger ">
+            <div class="row">
+                <div class="col-6 p-5">
+                    <p class="mb-0 text-white fs-1 fw-bold">Your Price</p>
+                </div>
+                <div class="col-6 p-5">
+                    <p class="mb-0 float-end text-white fs-1 fw-bold">&euro; <span id="prezzo-finale"></span></p>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <input type="checkbox" value="7" class="box">
     <input type="checkbox" value="5" class="box">
     <input type="checkbox" value="8" class="box">
 
-    <button>click</button>
+    <button>click</button> -->
     <script src="main.js"></script>
 </body>
 </html>

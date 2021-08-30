@@ -1,0 +1,17 @@
+body{
+    overflow-x: hidden
+}
+
+.check{
+    width: 30px;
+    height: 30px
+}
+
+.txt-box{
+    background-color: #fff5e2
+}
+
+.btn-box{
+    width: 250px;
+    height: 50px
+}

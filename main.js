@@ -1,4 +1,3 @@
-
 let check = document.getElementsByClassName("box");
 let calcolo = document.querySelector("button")
 let ingredienti = []
@@ -10,7 +9,7 @@ for(let i = 0; i < check.length; i++){
     let checkBox = check[i]
     checkBox.addEventListener("click", function(){
         if(checkBox.checked == true){
-            let num = parseInt(checkBox.value)
+            let num = parseFloat(checkBox.value)
             ingredienti.push(num)
             console.log(ingredienti)
         }else{
@@ -27,7 +26,9 @@ calcolo.addEventListener("click", function(){
 
 })
 
+let prezzoFinale = somma + 20
 
+document.getElementById("prezzo-finale").innerHTML = prezzoFinale
 
 
 
@@ -36,7 +37,7 @@ calcolo.addEventListener("click", function(){
 function UncheckAll(){ 
     var w = document.getElementsByClassName('box'); 
     for(var i = 0; i < w.length; i++){ 
-        if(w[i].type=='checkbox'){ 
+        if(w[i].type == 'checkbox'){ 
         w[i].checked = false; 
         }
     }
