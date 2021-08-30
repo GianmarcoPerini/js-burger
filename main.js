@@ -1,7 +1,11 @@
 let check = document.getElementsByClassName("box");
 let calcolo = document.querySelector("button")
+let sconto = document.getElementsByClassName("coupon");
 let ingredienti = []
+let prezzoFinale = 0
 let somma = 0
+
+
 
 UncheckAll()
 
@@ -22,13 +26,12 @@ calcolo.addEventListener("click", function(){
     for(let x = 0; x < ingredienti.length; x++){
         somma += ingredienti[x]
     }
-    console.log(somma);
-
+    prezzoFinale = somma + 4.5
+    document.getElementById("prezzo-finale").innerHTML = prezzoFinale
 })
 
-let prezzoFinale = somma + 20
 
-document.getElementById("prezzo-finale").innerHTML = prezzoFinale
+
 
 
 
