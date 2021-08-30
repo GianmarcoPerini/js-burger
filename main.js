@@ -1,9 +1,8 @@
 let check = document.getElementsByClassName("box");
-let scontoCoupon = ["pino","2","3"]
+let bottone = document.getElementById("btn")
+let scontoCoupon = ["SUPERSCONTO2021","CICCIOELONTO","PANINATOCUP21"]
 let ingredientiPrezzo = []
 let somma = 0
-
-
 
 UncheckAll()
 
@@ -20,43 +19,26 @@ for(let i = 0; i < check.length; i++){
     })
 }
 
+bottone.addEventListener("click", function(){
+    let sconti = document.getElementById("cupon").value;
+    let prezzoPieno = somma + 5
+    let prezzoScontato = (somma + 5) * 0.8
 
 
-let btn = document.querySelector("button")
-btn.addEventListener("click", function(){
     for(let x = 0; x < ingredientiPrezzo.length; x++){
         somma += ingredientiPrezzo[x]
     }
-
-    let sconto = document.getElementById("coupon").value;
-    console.log(sconto);
-
-    // if(scontoCoupon.includes(sconto)){
-    //     document.getElementById("prezzo-finale").innerHTML = (somma + 5) * 0.08
-    // } else{
-    //     document.getElementById("prezzo-finale").innerHTML = somma + 5
-    // }
-
-    document.getElementById("prezzo-finale").innerHTML = somma + 5
-
-
-
-    
-    
+    if(scontoCoupon.includes(sconti)){
+        document.getElementById("prezzo-finale").innerHTML = prezzoScontato.toFixed(2)
+    } else{
+        document.getElementById("prezzo-finale").innerHTML = prezzoPieno.toFixed(2)
+    }
 })
 
-
-
-
-
-
-
-
-function UncheckAll(){ 
-    var w = document.getElementsByClassName('box'); 
-    for(var i = 0; i < w.length; i++){ 
-        if(w[i].type == 'checkbox'){ 
-        w[i].checked = false; 
+function UncheckAll(){  
+    for(let i = 0; i < check.length; i++){ 
+        if(check[i].type == 'checkbox'){ 
+        check[i].checked = false; 
         }
     }
 } 
