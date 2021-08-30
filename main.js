@@ -1,8 +1,6 @@
 let check = document.getElementsByClassName("box");
-let calcolo = document.querySelector("button")
-let sconto = document.getElementsByClassName("coupon");
-let ingredienti = []
-let prezzoFinale = 0
+let scontoCoupon = ["pino","2","3"]
+let ingredientiPrezzo = []
 let somma = 0
 
 
@@ -14,20 +12,37 @@ for(let i = 0; i < check.length; i++){
     checkBox.addEventListener("click", function(){
         if(checkBox.checked == true){
             let num = parseFloat(checkBox.value)
-            ingredienti.push(num)
-            console.log(ingredienti)
+            ingredientiPrezzo.push(num)
+            console.log(ingredientiPrezzo)
         }else{
-            ingredienti.pop()
+            ingredientiPrezzo.pop()
         }
     })
 }
 
-calcolo.addEventListener("click", function(){
-    for(let x = 0; x < ingredienti.length; x++){
-        somma += ingredienti[x]
+
+
+let btn = document.querySelector("button")
+btn.addEventListener("click", function(){
+    for(let x = 0; x < ingredientiPrezzo.length; x++){
+        somma += ingredientiPrezzo[x]
     }
-    prezzoFinale = somma + 4.5
-    document.getElementById("prezzo-finale").innerHTML = prezzoFinale
+
+    let sconto = document.getElementById("coupon").value;
+    console.log(sconto);
+
+    // if(scontoCoupon.includes(sconto)){
+    //     document.getElementById("prezzo-finale").innerHTML = (somma + 5) * 0.08
+    // } else{
+    //     document.getElementById("prezzo-finale").innerHTML = somma + 5
+    // }
+
+    document.getElementById("prezzo-finale").innerHTML = somma + 5
+
+
+
+    
+    
 })
 
 
