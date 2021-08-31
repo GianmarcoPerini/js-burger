@@ -8,9 +8,14 @@ body{
 }
 
 .txt-box{
-    background-color: #fff5e2
+    background-color: #ffe2ad;
+    height: 35px
 }
 
 .btn-box{
+    height: 50px
+}
+
+.name{
     height: 50px
 }

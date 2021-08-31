@@ -7,6 +7,7 @@ let prezzoPanino = 5;
 let prezzoTotale;
 let prezzoScontato;
 let coupon = ["SUPERSCONTO2021","CICCIOELONTO","PANINATOCUP21"];
+console.log(coupon);
 
 UncheckAll()
 btn.addEventListener('click', function(){
